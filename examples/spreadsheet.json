@@ -1,0 +1,9 @@
+{
+  "schema": "stsb/0.1",
+  "identity": {"authority": "stsb", "family": "spreadsheet", "product": "reference-spreadsheet", "version": "0.1.0"},
+  "function": {"primary": "compute", "family": "spreadsheet", "capabilities": ["compute", "record", "create"]},
+  "blueprint": {"seed_digest": "sha256:1111111111111111111111111111111111111111111111111111111111111111", "generator": "stsb://generators/reference-spreadsheet@0.1"},
+  "source": {"swhid": "swh:1:dir:1111111111111111111111111111111111111111"},
+  "composition": {"spdx": "examples/spreadsheet.spdx.json"},
+  "builds": []
+}
