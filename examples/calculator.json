@@ -1,0 +1,25 @@
+{
+  "schema": "stsb/0.1",
+  "identity": {
+    "authority": "adico1",
+    "family": "calculator",
+    "product": "standard-ten-calculator",
+    "version": "1.0.0"
+  },
+  "function": {
+    "primary": "compute",
+    "family": "calculator",
+    "capabilities": ["compute"]
+  },
+  "blueprint": {
+    "seed_digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+    "generator": "uc://generators/calculator-application-generator@1"
+  },
+  "source": {
+    "swhid": "swh:1:dir:0000000000000000000000000000000000000000"
+  },
+  "composition": {
+    "spdx": "examples/calculator.spdx.json"
+  },
+  "builds": []
+}
