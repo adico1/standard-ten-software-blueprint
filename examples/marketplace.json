@@ -1,0 +1,9 @@
+{
+  "schema": "stsb/0.1",
+  "identity": {"authority": "stsb", "family": "marketplace", "product": "reference-marketplace", "version": "0.1.0"},
+  "function": {"primary": "transact", "family": "marketplace", "capabilities": ["record", "communicate", "coordinate", "decide", "transact"]},
+  "blueprint": {"seed_digest": "sha256:2222222222222222222222222222222222222222222222222222222222222222", "generator": "stsb://generators/reference-marketplace@0.1"},
+  "source": {"swhid": "swh:1:dir:2222222222222222222222222222222222222222"},
+  "composition": {"spdx": "examples/marketplace.spdx.json"},
+  "builds": []
+}
