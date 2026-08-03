@@ -9,9 +9,11 @@ from validator import validate
 ROOT = Path(__file__).resolve().parent
 REQUIRED = [
     "README.md", "SPECIFICATION.md", "CONTRIBUTING.md", "GOVERNANCE.md",
-    "PRIOR-ART.md", "SECURITY.md", "CHANGELOG.md", "RELEASE_CHECKLIST.md",
+    "PRIOR-ART.md", "MAPPINGS.md", "ROADMAP.md", "CODE_OF_CONDUCT.md",
+    "SECURITY.md", "CHANGELOG.md", "RELEASE_CHECKLIST.md",
     "LICENSE", "LICENSE-SPECIFICATION.md", "NOTICE", "CITATION.cff",
     "schemas/stsb.schema.json", "taxonomy/roots.json",
+    "decisions/0001-candidate-functional-roots.md",
 ]
 
 
