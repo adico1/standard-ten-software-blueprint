@@ -1,7 +1,6 @@
 name: Functional counterexample
 description: Submit software behavior that may fall outside the candidate roots
 title: "Counterexample: "
-labels: [counterexample]
 body:
   - type: input
     id: family
