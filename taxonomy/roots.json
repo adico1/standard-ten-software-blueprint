@@ -1,0 +1,16 @@
+{
+  "schema": "stsb-roots/0.1",
+  "status": "candidate-under-adversarial-testing",
+  "roots": [
+    {"id": "compute", "effect": "derive information from information by declared rules"},
+    {"id": "record", "effect": "persist or retrieve state across events"},
+    {"id": "create", "effect": "produce or modify a user-recognized artifact"},
+    {"id": "observe", "effect": "measure, detect, inspect, or report a subject"},
+    {"id": "communicate", "effect": "transfer information between distinct parties or endpoints"},
+    {"id": "coordinate", "effect": "arrange actors, resources, order, or timing"},
+    {"id": "decide", "effect": "select, classify, recommend, authorize, or reject"},
+    {"id": "transact", "effect": "change ownership, rights, obligations, or accounted value"},
+    {"id": "simulate", "effect": "execute a behavioral representation of another system"},
+    {"id": "control", "effect": "cause or constrain change in an external machine or environment"}
+  ]
+}
