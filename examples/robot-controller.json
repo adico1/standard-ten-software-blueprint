@@ -1,0 +1,9 @@
+{
+  "schema": "stsb/0.1",
+  "identity": {"authority": "stsb", "family": "robot-controller", "product": "reference-robot-controller", "version": "0.1.0"},
+  "function": {"primary": "control", "family": "robot-controller", "capabilities": ["compute", "observe", "decide", "simulate", "control"]},
+  "blueprint": {"seed_digest": "sha256:3333333333333333333333333333333333333333333333333333333333333333", "generator": "stsb://generators/reference-robot-controller@0.1"},
+  "source": {"swhid": "swh:1:dir:3333333333333333333333333333333333333333"},
+  "composition": {"spdx": "examples/robot-controller.spdx.json"},
+  "builds": []
+}
