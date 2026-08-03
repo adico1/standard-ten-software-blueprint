@@ -1,0 +1,20 @@
+name: Independent implementation
+description: Register an independently developed STSB validator or generator
+title: "Implementation: "
+body:
+  - type: input
+    id: repository
+    attributes: {label: Public repository and immutable revision}
+    validations: {required: true}
+  - type: input
+    id: command
+    attributes: {label: Deterministic verification command}
+    validations: {required: true}
+  - type: textarea
+    id: results
+    attributes: {label: Acceptance and rejection test results}
+    validations: {required: true}
+  - type: textarea
+    id: independence
+    attributes: {label: How independent construction was maintained}
+    validations: {required: true}
