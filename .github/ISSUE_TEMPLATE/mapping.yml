@@ -1,0 +1,20 @@
+name: Standards mapping
+description: Propose or correct a mapping to an established identifier or metadata standard
+title: "Mapping: "
+body:
+  - type: input
+    id: standard
+    attributes: {label: Standard and version}
+    validations: {required: true}
+  - type: textarea
+    id: mapping
+    attributes: {label: Field-by-field mapping and cardinality}
+    validations: {required: true}
+  - type: textarea
+    id: loss
+    attributes: {label: Information loss in both directions}
+    validations: {required: true}
+  - type: textarea
+    id: evidence
+    attributes: {label: Authoritative references and example}
+    validations: {required: true}
