@@ -1,68 +1,94 @@
 # Standard Ten Software Blueprint (STSB)
 
-An open proposal for a universal, reproducible software blueprint connecting **what software does** to **the exact artifacts that implement it**.
+[![STSB gauntlet](https://github.com/adico1/standard-ten-software-blueprint/actions/workflows/ci.yml/badge.svg)](https://github.com/adico1/standard-ten-software-blueprint/actions/workflows/ci.yml)
 
-## Problem
+A candidate open standard connecting **what software does**, **the minimum blueprint that defines it**, and **the exact artifacts that implement it**.
 
-Software already has identifiers for separate layers:
+## Publication status
 
-- **SWHID / ISO/IEC 18670** — immutable source artifacts
-- **SPDX / ISO/IEC 5962** — components and relationships
-- **purl** — ecosystem packages
-- **SWID / ISO/IEC 19770-2** — products and versions
-- **reproducible-build digests** — exact build outputs
+**0.1.0-rc1 — publication-ready release candidate under adversarial testing.**
 
-What is missing is one canonical record connecting those layers to a functional identity, a minimal deterministic blueprint, its generator, and verifiable releases and builds.
+The implementation baseline is verified. The completeness of the ten functional roots is **not proven**. Counterexamples are invited and tracked publicly.
 
-STSB proposes that connection layer. It does **not** replace existing standards.
+## Existing standards retained
 
-## Status
+| Layer | Established identity |
+|---|---|
+| Immutable source artifact | SWHID / ISO/IEC 18670 |
+| Components and relationships | SPDX / ISO/IEC 5962 |
+| Ecosystem package | Package URL (purl) |
+| Product and installed version | SWID / ISO/IEC 19770-2 |
+| Exact build output | Cryptographic build digest |
+| Functional identity and reproducible intent | STSB candidate layer |
 
-**Pre-standard 0.1 — candidate under adversarial testing.**
+STSB references these systems; it does not replace them.
 
-The ten functional roots are a hypothesis, not a completed proof:
+## Candidate functional roots
 
 `compute`, `record`, `create`, `observe`, `communicate`, `coordinate`, `decide`, `transact`, `simulate`, `control`.
 
-> Public challenge: submit one real software system that STSB cannot represent without adding an uncontrolled root category.
+Applications are compositions. The vocabulary is closed only within schema version 0.1 while it is tested against counterexamples.
 
-## Ten identity levels
+## Verify in one command
 
-| Level | Object | Question |
-|---:|---|---|
-| 0 | Function | What transformation is performed? |
-| 1 | Family | What application family performs it? |
-| 2 | Product | Which named product is it? |
-| 3 | Blueprint | What minimum declaration regenerates it? |
-| 4 | Release | Which published version is it? |
-| 5 | Source | Which immutable source tree implements it? |
-| 6 | Package | How is it distributed? |
-| 7 | Build | Which exact executable artifact resulted? |
-| 8 | Deployment | Where is it installed? |
-| 9 | Execution | Which running occurrence is observed? |
+Requires Python 3.10 or later and no third-party packages.
 
-## Reference proof
+```bash
+python3 release.py
+```
+
+Expected result:
 
 ```text
-calculator request
-  → canonical STSB blueprint
-  → deterministic generator
-  → source + SWHID
-  → SPDX composition
-  → purl/SWID release references
-  → reproducible build digest
-  → validator PASS
+Ran 6 tests
+OK
+STSB RELEASE PASS: 4 examples
 ```
+
+Validate one blueprint:
+
+```bash
+python3 validator.py examples/calculator.json
+```
+
+## Repository map
+
+- [Candidate specification](SPECIFICATION.md)
+- [JSON Schema](schemas/stsb.schema.json)
+- [Machine-readable roots](taxonomy/roots.json)
+- [Identifier mappings](MAPPINGS.md)
+- [Prior-art boundary](PRIOR-ART.md)
+- [Reference examples](examples)
+- [Decision 0001](decisions/0001-candidate-functional-roots.md)
+- [Validation evidence](VALIDATION.md)
+- [Roadmap](ROADMAP.md)
+- [Release checklist](RELEASE_CHECKLIST.md)
+- [Signed step ledger](STAMPS.md)
 
 ## Participate
 
-- Open a **counterexample** issue.
-- Propose a mapping to an established identifier.
-- Submit an independently implemented validator.
-- Challenge root necessity, distinctness, or closure.
+- Submit a functional counterexample using the issue template.
+- Correct or extend a standards mapping with authoritative references.
+- Register an independent validator implementation.
+- Contribute a materially distinct software-family example.
 
-See [STAMPS.md](STAMPS.md). Specification text is intended for CC BY 4.0; reference code is intended for Apache-2.0.
+Read [CONTRIBUTING.md](CONTRIBUTING.md), [GOVERNANCE.md](GOVERNANCE.md), and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+
+## Known limitations
+
+- The initial examples contain explicitly documented placeholder SWHIDs and digests; they are not resolution claims.
+- Four examples are sufficient to test the machinery, not taxonomy completeness.
+- No independent implementation has yet been accepted.
+- The 1.0 threshold requires a published census, zero unresolved counterexamples in scope, independent implementations, and shared governance.
+
+## Licensing
+
+- Reference code, tests, schemas, and workflows: [Apache-2.0](LICENSE)
+- Specification and documentation: [CC BY 4.0](LICENSE-SPECIFICATION.md)
+
+Copyright 2026 Adi Ovadia Cohen (adico). See [NOTICE](NOTICE).
 
 ---
 
 Founding stamp: `2026-08-03T19:24:07.418459+00:00` (Python UTC).
+
