@@ -1,0 +1,21 @@
+name: Functional counterexample
+description: Submit software behavior that may fall outside the candidate roots
+title: "Counterexample: "
+labels: [counterexample]
+body:
+  - type: input
+    id: family
+    attributes: {label: Software family}
+    validations: {required: true}
+  - type: textarea
+    id: transition
+    attributes: {label: Essential input, state transition, output, and external effect}
+    validations: {required: true}
+  - type: textarea
+    id: failure
+    attributes: {label: Why composition of existing roots fails}
+    validations: {required: true}
+  - type: textarea
+    id: evidence
+    attributes: {label: Public evidence or reproducible example}
+    validations: {required: true}
