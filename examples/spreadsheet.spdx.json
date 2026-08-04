@@ -1,0 +1,30 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "reference-spreadsheet-composition",
+  "documentNamespace": "https://raw.githubusercontent.com/adico1/standard-ten-software-blueprint/main/examples/spreadsheet.spdx.json",
+  "comment": "Placeholder composition manifest for an STSB reference example. It is structurally valid SPDX but does not describe a real artifact inventory; see MAPPINGS.md placeholder rule.",
+  "creationInfo": {
+    "created": "2026-08-04T00:00:00Z",
+    "creators": [
+      "Organization: stsb",
+      "Tool: stsb-release"
+    ]
+  },
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-Package-root",
+      "name": "reference-spreadsheet",
+      "versionInfo": "0.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    }
+  ],
+  "documentDescribes": [
+    "SPDXRef-Package-root"
+  ]
+}

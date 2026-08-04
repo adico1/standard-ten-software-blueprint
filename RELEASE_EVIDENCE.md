@@ -1,4 +1,22 @@
-# Release Evidence — v0.1.0-rc1
+# Release Evidence
+
+## v0.1.0-rc2 — hardening pass
+
+Stamp: 2026-08-04T12:56:42+00:00 (Python UTC)
+
+- [x] Validator enforces all SPECIFICATION.md §7 rejection rules at every nesting level; cross-checked against the JSON Schema on identical mutation probes with agreement.
+- [x] Seventeen acceptance/rejection tests pass, each asserting its specific error message.
+- [x] Strict SWHID grammar enforced in schema and validator.
+- [x] All `composition.spdx` references resolve to parseable placeholder SPDX documents; `release.py` enforces this.
+- [x] Generator scheme unified to `stsb://`; schema `$id` repaired; ledger retitled with AI-assistance disclosure; boundary adjudications published as Decision 0002.
+
+```text
+Ran 17 tests
+OK
+STSB RELEASE PASS: 4 examples
+```
+
+## v0.1.0-rc1 — initial publication
 
 Publication-readiness stamp: 2026-08-03T19:57:27.872414+00:00 (Python UTC)
 

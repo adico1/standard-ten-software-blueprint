@@ -6,7 +6,7 @@ A candidate open standard connecting **what software does**, **the minimum bluep
 
 ## Publication status
 
-**0.1.0-rc1 — publication-ready release candidate under adversarial testing.**
+**0.1.0-rc2 — publication-ready release candidate under adversarial testing.**
 
 The implementation baseline is verified. The completeness of the ten functional roots is **not proven**. Counterexamples are invited and tracked publicly.
 
@@ -40,7 +40,7 @@ python3 release.py
 Expected result:
 
 ```text
-Ran 6 tests
+Ran 17 tests
 OK
 STSB RELEASE PASS: 4 examples
 ```
@@ -60,10 +60,11 @@ python3 validator.py examples/calculator.json
 - [Prior-art boundary](PRIOR-ART.md)
 - [Reference examples](examples)
 - [Decision 0001](decisions/0001-candidate-functional-roots.md)
+- [Decision 0002 — boundary adjudications](decisions/0002-boundary-adjudications.md)
 - [Validation evidence](VALIDATION.md)
 - [Roadmap](ROADMAP.md)
 - [Release checklist](RELEASE_CHECKLIST.md)
-- [Signed step ledger](STAMPS.md)
+- [Recorded step ledger](STAMPS.md)
 
 ## Participate
 

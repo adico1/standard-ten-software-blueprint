@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/adico1/standard-ten-software-blueprint/blob/main/schemas/stsb.schema.json",
+  "$id": "https://raw.githubusercontent.com/adico1/standard-ten-software-blueprint/main/schemas/stsb.schema.json",
   "title": "Standard Ten Software Blueprint 0.1",
   "type": "object",
   "additionalProperties": false,
@@ -46,7 +46,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": ["swhid"],
-      "properties": {"swhid": {"type": "string", "pattern": "^swh:1:"}}
+      "properties": {"swhid": {"type": "string", "pattern": "^swh:1:(cnt|dir|rev|rel|snp):[0-9a-f]{40}$"}}
     },
     "composition": {
       "type": "object",

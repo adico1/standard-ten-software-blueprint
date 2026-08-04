@@ -22,10 +22,20 @@ def main():
     for name in REQUIRED:
         if not (ROOT / name).is_file():
             failures.append(f"missing required file: {name}")
-    for path in sorted((ROOT / "examples").glob("*.json")):
-        errors = validate(json.loads(path.read_text(encoding="utf-8")))
+    blueprints = [
+        path for path in sorted((ROOT / "examples").glob("*.json"))
+        if not path.name.endswith(".spdx.json")
+    ]
+    for path in blueprints:
+        record = json.loads(path.read_text(encoding="utf-8"))
+        errors = validate(record)
         if errors:
             failures.append(f"{path.name}: {'; '.join(errors)}")
+        spdx = record.get("composition", {}).get("spdx", "")
+        if spdx and not (ROOT / spdx).is_file():
+            failures.append(f"{path.name}: composition.spdx references missing file {spdx}")
+        else:
+            json.loads((ROOT / spdx).read_text(encoding="utf-8"))
     json.loads((ROOT / "schemas" / "stsb.schema.json").read_text(encoding="utf-8"))
     json.loads((ROOT / "taxonomy" / "roots.json").read_text(encoding="utf-8"))
     suite = unittest.defaultTestLoader.discover(str(ROOT / "tests"))
@@ -37,7 +47,7 @@ def main():
         for failure in failures:
             print("-", failure)
         return 1
-    print(f"STSB RELEASE PASS: {len(list((ROOT / 'examples').glob('*.json')))} examples")
+    print(f"STSB RELEASE PASS: {len(blueprints)} examples")
     return 0
 
 

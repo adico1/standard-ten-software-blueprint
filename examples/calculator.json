@@ -13,7 +13,7 @@
   },
   "blueprint": {
     "seed_digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
-    "generator": "uc://generators/calculator-application-generator@1"
+    "generator": "stsb://generators/calculator-application-generator@1"
   },
   "source": {
     "swhid": "swh:1:dir:0000000000000000000000000000000000000000"
